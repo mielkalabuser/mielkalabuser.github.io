@@ -1,90 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>議論×投票　話して、考えて、投じる一票</title>
+<style>
+  /* リセット */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Yu Gothic', 'Meiryo', sans-serif;
+    background: #f0f8ff;
+    color: #003366;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 720px;
+    margin: auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2rem;
+    color: #007acc;
+    margin-bottom: 5px;
+  }
+  header p {
+    font-size: 1.2rem;
+    color: #005b99;
+  }
+  section {
+    margin-bottom: 30px;
+  }
+  section h2 {
+    font-size: 1.5rem;
+    border-bottom: 3px solid #007acc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #007acc;
+  }
+  .content-block {
+    background: #e6f2ff;
+    padding: 15px 20px;
+    border-radius: 8px;
+  }
+  .manifest, .answers, .glossary {
+    margin-bottom: 20px;
+  }
+  .answers > div {
+    margin-bottom: 15px;
+  }
+  .answers h3, .glossary h3 {
+    font-weight: bold;
+    color: #005b99;
+    margin-bottom: 8px;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666666;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+  }
+  /* スマホ調整 */
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    header p {
+      font-size: 1rem;
+    }
+    section h2 {
+      font-size: 1.2rem;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
+
+<header>
+  <h1>議論×投票　話して、考えて、投じる一票</h1>
+  <p>模擬投票イベント公式サイト</p>
+</header>
+
+<section id="manifest">
+  <h2>イベントマニフェスト</h2>
+  <div class="content-block">
+    <p>ここに当日の展示マニフェストの文章を入れてください。</p>
+  </div>
+</section>
+
+<section id="issues">
+  <h2>争点解説</h2>
+  <div class="content-block">
+    <h3>物価高対策</h3>
+    <p>ここに物価高対策に関する説明を入れてください。</p>
+    <h3>SNS規制</h3>
+    <p>ここにSNS規制に関する説明を入れてください。</p>
+  </div>
+</section>
+
+<section id="answers">
+  <h2>アンケート回答全文</h2>
+  <div class="content-block answers">
+    <div id="issue1">
+      <h3>争点1：物価高対策</h3>
+      <p>ここに11人の政治家の回答全文を掲載してください。</p>
     </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
+    <div id="issue2">
+      <h3>争点2：SNS規制</h3>
+      <p>ここに11人の政治家の回答全文を掲載してください。</p>
+    </div>
+    <div id="issue3">
+      <h3>争点3：自由トピック</h3>
+      <p>ここに11人の政治家の自由回答全文を掲載してください。</p>
     </div>
   </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
+</section>
+
+<section id="glossary">
+  <h2>用語解説</h2>
+  <div class="content-block glossary">
+    <ul>
+      <li><strong>用語1：</strong> 用語の簡単な説明をここに記載</li>
+      <li><strong>用語2：</strong> 用語の簡単な説明をここに記載</li>
+      <li><strong>用語3：</strong> 用語の簡単な説明をここに記載</li>
+    </ul>
   </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
+</section>
+
+<footer>
+  <p>© 2025 議論×投票イベント</p>
+</footer>
+
 </body>
 </html>
